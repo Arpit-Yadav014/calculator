@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mechanics Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Mechanics Calculator</h1>
+    <div class="calculator">
+      <label for="formula">Select Formula:</label>
+      <select id="formula" onchange="showInputs()">
+        <option value="" disabled selected>Select...</option>
+        <optgroup label="Kinematics">
+          <option value="velocity">v = u + at</option>
+          <option value="displacement">s = ut + 1/2 at²</option>
+          <option value="velocityRelation">v² = u² + 2as</option>
+        </optgroup>
+        <optgroup label="Work and Energy">
+          <option value="work">W = Fd cosθ</option>
+          <option value="kineticEnergy">KE = 1/2 mv²</option>
+          <option value="potentialEnergy">PE = mgh</option>
+        </optgroup>
+        <optgroup label="Newton's Laws">
+          <option value="force">F = ma</option>
+        </optgroup>
+      </select>
+
+      <div id="inputs"></div>
+
+      <button id="calculate" onclick="calculate()">Calculate</button>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
